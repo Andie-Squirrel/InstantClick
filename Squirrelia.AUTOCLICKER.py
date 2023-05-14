@@ -100,7 +100,7 @@ def beep(p,l,quan=1): # set the default amount of beeps to ONE, just in case it 
 esc = '\\x1b' # Escape character for 'ESC' for the msvcrt module
 
 # exit flag for main loop
-exit = False
+exitFlag = False
 
 # this function that will check if the key associated with exiting is pressed and will output either true or false
 # Two methods of key input is employed instead of perhaps preferably hooking the keys.
@@ -180,9 +180,9 @@ def displayDelay():
 
 #--------------------------MAIN LOOP--------------------------#
 
-while not exit: # main loop
+while not exitFlag: # main loop
 	# What I hope to use instead of this to reduce lag: (https://nitratine.net/blog/post/how-to-use-pynputs-mouse-and-keyboard-listener-at-the-same-time/)
-	exit = checkEsc() # start each iteration by checking if the `ESC` key is pressed
+	exitFlag = checkEsc() # start each iteration by checking if the `ESC` key is pressed
 
 	# these three variables check if the LEFT, RIGHT, and middle mouse buttons are immediately being pressed
 	ml = win32api.GetKeyState(0x01)
