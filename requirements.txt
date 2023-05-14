@@ -1,0 +1,3 @@
+pynput
+keyboard
+pywin32
