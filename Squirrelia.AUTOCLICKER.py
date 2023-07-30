@@ -159,7 +159,7 @@ def sendClick():
 	A module to send mouse press and release to the system
 	"""
 
-	time.sleep(MINIMUM_DELAY) # BEWARE, see line 7
+	time.sleep(MINIMUM_DELAY) # BEWARE, see line 14
 
 	win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0) # register mouse-down
 	win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0) # mouse-up release
